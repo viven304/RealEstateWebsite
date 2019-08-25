@@ -1,0 +1,57 @@
+.heading {
+    font-size: 35px;
+    text-align: center;
+}
+
+#content {
+    background-color:#708090;
+    width: 98%;
+    height: 100%;
+    display: block;
+    margin-left: 10px;    
+    margin-right: 10px;
+    position: relative;
+}
+
+#map {
+    height: 500px;  /* The height is 400 pixels */
+    width: 98%;  /* The width is the width of the web page */
+    left: 15px;
+    top: 15px;
+    position: relative;
+}
+
+
+.grid {
+  height: 100%;
+  width: 30%;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 400px 400px;
+  grid-gap: 10px 15px;
+  margin-left: 35%;
+}
+  
+
+  .box {
+    background-color: #2F4F4F;
+    color: white;
+    border-radius: 10px;
+    border: 2px grey;
+    opacity: 1;
+    width: 100%;
+   
+  }
+  #one {
+      opacity: 1;
+      margin-left: 0px;
+  }
+
+  img {
+      border-radius: 10px;
+  }
+
+  .photoToDisplay {
+      width:220px;
+      height: 200px;
+  }

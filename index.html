@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+
+    <title>Fake Realtors</title>
+
+    <div class="heading">
+        <h1>Fake Realtors</h1>
+   </div>
+
+</head>
+<body>
+    
+<div id="content"> 
+
+    <!-- Use of Google Maps API-->
+        <div id="map"></div>
+            <script>
+        // Initialize and add the map
+                function initMap() {
+                    // The location of Uluru
+                    var uluru = {lat: 49.262564, lng: -123.256456};
+                    // The map, centered at Uluru
+                    var map = new google.maps.Map(
+                        document.getElementById('map'), {zoom: 15, center: uluru});
+                    // The marker, positioned at Uluru
+                    var marker = new google.maps.Marker({position: uluru, map: map});
+                }
+
+            </script>
+            <!--Load the API from the specified URL
+            * The async attribute allows the browser to render the page while the API loads
+            * The key parameter will contain your own API key (which is not needed for this tutorial)
+            * The callback parameter executes the initMap() function
+            -->
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlYjSiXpmXkIxkQTjukrr_oz4ToVN5naQ&callback=initMap" type="text/javascript">
+            </script>
+            <br><br><br>
+
+<div class="grid">
+        <div class="box">
+            <img id= "one" class = "photoToDisplay" src="picture1.jpg" onmouseover="reduceOpacityOne()" onmouseout="increaseOpacityOne()">
+        </div>
+        <div class="box">
+            <img id= "two" class = "photoToDisplay" src="picture2.jpg" onmouseover="reduceOpacityTwo()" onmouseout="increaseOpacityTwo()">
+        </div>
+        <div class="box">
+            <img id= "three" class = "photoToDisplay" src="picture3.jpg" onmouseover="reduceOpacityThree()" onmouseout="increaseOpacityThree()">
+        </div>
+        <div class="box">
+            <img id= "four" class = "photoToDisplay"src="picture4.jpg" onmouseover="reduceOpacityFour()" onmouseout="increaseOpacityFour()">
+        </div>
+</div>
+
+
+</div>
+
+<script src="index.js"></script>
+<script src="jquery-3.4.1.min.js"></script>
+</body>
+</html>
