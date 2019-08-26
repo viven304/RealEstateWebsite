@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<div id="sqr" onclick="hideOverlay()" data-photoHiddenClass="photoToEnlarge"></div>
+<img id= "photo1hide" class = "photoToEnlarge" src="picture1.jpg">
+<img id= "photo2hide" class = "photoToEnlarge" src="picture2.jpg">
+<img id= "photo3hide" class = "photoToEnlarge" src="picture3.jpg">
+<img id= "photo4hide" class = "photoToEnlarge" src="picture4.jpg">
+
+
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
@@ -16,7 +24,9 @@
    </div>
 
 </head>
+
 <body>
+
     
 <div id="content"> 
 
@@ -47,23 +57,24 @@
 
 <div class="grid">
         <div class="box">
-            <img id= "one" class = "photoToDisplay" src="picture1.jpg" onmouseover="reduceOpacityOne()" onmouseout="increaseOpacityOne()">
+            <img id= "photo1" class = "photoToDisplay" src="picture1.jpg" data-photoId="photo1" data-photoHiddenId="photo1hide">
         </div>
         <div class="box">
-            <img id= "two" class = "photoToDisplay" src="picture2.jpg" onmouseover="reduceOpacityTwo()" onmouseout="increaseOpacityTwo()">
+            <img id= "photo2" class = "photoToDisplay" src="picture2.jpg" data-photoId="photo2" data-photoHiddenId="photo2hide">
         </div>
         <div class="box">
-            <img id= "three" class = "photoToDisplay" src="picture3.jpg" onmouseover="reduceOpacityThree()" onmouseout="increaseOpacityThree()">
+            <img id= "photo3" class = "photoToDisplay" src="picture3.jpg" data-photoId="photo3" data-photoHiddenId="photo3hide">
         </div>
         <div class="box">
-            <img id= "four" class = "photoToDisplay"src="picture4.jpg" onmouseover="reduceOpacityFour()" onmouseout="increaseOpacityFour()">
+            <img id= "photo4" class = "photoToDisplay"src="picture4.jpg" data-photoId="photo4" data-photoHiddenId="photo4hide">
         </div>
 </div>
 
 
 </div>
 
-<script src="index.js"></script>
+
 <script src="jquery-3.4.1.min.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

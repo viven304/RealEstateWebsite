@@ -1,72 +1,34 @@
-function reduceOpacityOne() {
-    $(function() {
-        $("#one").animate({
+$(function() {
+
+    $('.photoToEnlarge').hide();
+    $('#sqr').hide();
+
+    $('.photoToDisplay').on('mouseover', function() {
+        let photoId = $(this).attr('data-photoId');
+        $('#' + photoId).animate({
             opacity: '-=0.5'
         });
-     });
-}
-
-
-function increaseOpacityOne() {
- $(function() {
-    $("#one").animate({
-        opacity: '+=0.5'
     });
- });
-}
 
-
-function reduceOpacityTwo() {
-    $(function() {
-        $("#two").animate({
-            opacity: '-=0.5'
+    $('.photoToDisplay').on('mouseleave', function() {
+        let photoId = $(this).attr('data-photoId');
+        $('#' + photoId).animate({
+            opacity: '+=0.5'
         });
-     });
-}
-
-
-function increaseOpacityTwo() {
- $(function() {
-    $("#two").animate({
-        opacity: '+=0.5'
     });
- });
-}
 
-
-
-function reduceOpacityThree() {
-    $(function() {
-        $("#three").animate({
-            opacity: '-=0.5'
-        });
-     });
-}
-
-
-function increaseOpacityThree() {
- $(function() {
-    $("#three").animate({
-        opacity: '+=0.5'
+    $('.photoToDisplay').on('click', function() {
+        let photoHiddenId = $(this).attr('data-photoHiddenId');
+        $('#' + photoHiddenId).show();
+        $('#sqr').show();
     });
- });
-}
 
-
-
-function reduceOpacityFour() {
-    $(function() {
-        $("#four").animate({
-            opacity: '-=0.5'
-        });
-     });
-}
-
-
-function increaseOpacityFour() {
- $(function() {
-    $("#four").animate({
-        opacity: '+=0.5'
+    $('#sqr').on('click', function() {
+        let photoHiddenId = $(this).attr('data-photoHiddenClass');
+        $('.' + photoHiddenId).hide();
+        $('#sqr').hide();
     });
- });
-}
+
+
+
+});
