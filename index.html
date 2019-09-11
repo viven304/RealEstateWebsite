@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<div id="sqr" onclick="hideOverlay()" data-photoHiddenClass="photoToEnlarge"></div>
+<div id="sqr" data-photoHiddenClass="photoToEnlarge"></div>
+<div class="square" id="sqr2"></div>
+<div class="square" id="sqr3"></div>
+<div class="square" id="sqr4"></div>
 <img id= "photo1hide" class = "photoToEnlarge" src="picture1.jpg">
 <img id= "photo2hide" class = "photoToEnlarge" src="picture2.jpg">
 <img id= "photo3hide" class = "photoToEnlarge" src="picture3.jpg">
@@ -71,8 +74,16 @@
 </div>
 
 
-</div>
 
+<form id="createNewListing" method="POST" action="/api/listings">
+    <p> Create new listing</p>
+    <label for="listingName"> Enter name:</label>
+    <input type ="text" id="listingName" name="name" value="Enter text here">
+
+    <input type="submit" value="Submit">
+
+</form>
+</div>
 
 <script src="jquery-3.4.1.min.js"></script>
 <script src="index.js"></script>

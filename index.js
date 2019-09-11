@@ -2,6 +2,7 @@ $(function() {
 
     $('.photoToEnlarge').hide();
     $('#sqr').hide();
+    $('#sqr2').hide();
 
     $('.photoToDisplay').on('mouseover', function() {
         let photoId = $(this).attr('data-photoId');
@@ -27,8 +28,21 @@ $(function() {
         let photoHiddenId = $(this).attr('data-photoHiddenClass');
         $('.' + photoHiddenId).hide();
         $('#sqr').hide();
+        $('#sqr2').hide();
     });
 
+    $('#sqr').on('mousemove', function(e) {
 
+        let percentageInX = e.pageX;
+        let percentageInY = e.pageY;
 
+        $("#sqr2").css({
+            'left': percentageInX,
+            'top': percentageInY
+
+        });
+        $("#sqr2").show();
+
+    });
 });
+
